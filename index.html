@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>國中英文家教講義庫 | Junior High English Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper-bg: #faf6ee;
+      --grid-line: #ece4d3;
+      --card-bg: #fffdf9;
+      --ink: #3d352e;
+      --muted: #786d63;
+      --matcha: #4a7c59;
+      --matcha-dark: #2f5233;
+      --matcha-soft: #e3efe6;
+      --tape-pink: rgba(235, 185, 178, 0.65);
+      --tape-yellow: rgba(244, 219, 148, 0.72);
+      --shadow-hard: #d6ccb8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--paper-bg);
+      background-image:
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 24px 24px;
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    .serif { font-family: "Noto Serif TC", Georgia, serif; }
+    header { max-width: 960px; margin: 2.5rem auto 1.5rem; padding: 0 1.25rem; }
+    .magazine-cover {
+      background: var(--card-bg);
+      border: 2px solid var(--ink);
+      border-radius: 18px;
+      padding: 2.75rem 2rem;
+      position: relative;
+      box-shadow: 6px 6px 0px var(--matcha);
+      text-align: center;
+    }
+    .washi-tape {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-1.5deg);
+      width: 150px;
+      height: 28px;
+      background: var(--tape-yellow);
+      border-left: 2px dashed rgba(61,53,46,0.2);
+      border-right: 2px dashed rgba(61,53,46,0.2);
+    }
+    .issue-tag {
+      display: inline-block;
+      border: 1.5px solid var(--matcha-dark);
+      color: var(--matcha-dark);
+      background: var(--matcha-soft);
+      padding: 0.2rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+    header h1 { font-size: 2.15rem; color: var(--ink); letter-spacing: 0.04em; margin-bottom: 0.75rem; }
+    header h1 span { color: var(--matcha); border-bottom: 3px solid var(--tape-yellow); }
+    header p { max-width: 580px; margin: 0 auto; color: var(--muted); font-size: 0.98rem; }
+    main { max-width: 960px; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.75rem;
+    }
+    .section-header h2 { font-size: 1.35rem; color: var(--ink); }
+    .section-header span { font-size: 0.85rem; color: var(--muted); font-weight: 500; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.75rem; }
+    .card {
+      background: var(--card-bg);
+      border: 2px solid var(--ink);
+      border-radius: 14px;
+      padding: 1.75rem 1.5rem 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 4px 4px 0px var(--shadow-hard);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { transform: translate(-2px, -3px); box-shadow: 6px 7px 0px var(--matcha); }
+    .card-tape {
+      position: absolute;
+      top: -11px;
+      right: 22px;
+      width: 72px;
+      height: 22px;
+      background: var(--tape-pink);
+      transform: rotate(3deg);
+    }
+    .tag {
+      display: inline-block;
+      background: var(--matcha);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+      margin-bottom: 0.85rem;
+      width: fit-content;
+      letter-spacing: 0.04em;
+    }
+    .card h3 { font-size: 1.22rem; margin-bottom: 0.6rem; line-height: 1.45; }
+    .card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.25rem; }
+    .pills { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.1rem; }
+    .pills span {
+      background: var(--paper-bg);
+      border: 1px solid #d6ccb8;
+      color: var(--ink);
+      font-size: 0.76rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+    }
+    .cta {
+      color: var(--matcha-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px dashed #d6ccb8;
+      padding-top: 0.75rem;
+    }
+    .card.coming-soon {
+      border-style: dashed;
+      background: rgba(255, 253, 249, 0.65);
+      box-shadow: none;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--muted);
+      min-height: 240px;
+    }
+    .card.coming-soon:hover { transform: none; box-shadow: none; }
+    footer { text-align: center; padding: 2rem 1rem 3rem; color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="magazine-cover">
+    <div class="washi-tape"></div>
+    <div class="issue-tag">VOL.01 ｜ JUNIOR HIGH ENGLISH NOTES</div>
+    <h1 class="serif">國中英文<span>家教講義庫</span></h1>
+    <p>把繁雜的英文文法整理成好讀的隨身筆記。從國一基礎到國三會考，搭配易錯便條紙與隨堂小練習。</p>
+  </div>
+</header>
+
+<main>
+  <div class="section-header">
+    <h2 class="serif">✦ 講義目錄 INDEX</h2>
+    <span>持續更新中・依單元編號排列</span>
+  </div>
+
+  <div class="grid">
+
+    <a class="card" href="lessons/L1.html">
+      <div class="card-tape"></div>
+      <div>
+        <span class="tag">L1・國一上核心基礎</span>
+        <h3 class="serif">Be 動詞的現在式與否定、疑問句</h3>
+        <p>用一張表格搞懂 am / is / are 的主詞搭配規則、否定句縮寫，以及段考最愛考的簡答陷阱。</p>
+        <div class="pills">
+          <span># 文法對照表</span>
+          <span># 家教小叮嚀</span>
+          <span># 3題小測驗</span>
+        </div>
+      </div>
+      <div class="cta">
+        <span>翻開講義筆記</span>
+        <span>→</span>
+      </div>
+    </a>
+
+    <div class="card coming-soon">
+      <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🌿</div>
+      <b class="serif" style="color: var(--ink); font-size: 1.05rem;">L2・一般動詞現在簡單式</b>
+      <span style="font-size: 0.84rem; margin-top: 0.35rem;">筆記整理中，即將上架…</span>
+    </div>
+
+    <div class="card coming-soon">
+      <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🔖</div>
+      <b class="serif" style="color: var(--ink); font-size: 1.05rem;">L3・現在進行式與祈使句</b>
+      <span style="font-size: 0.84rem; margin-top: 0.35rem;">筆記整理中，即將上架…</span>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  © 2026 國中英文家教講義庫 ・ Crafted with AGENTS.md
+</footer>
+
+</body>
+</html>

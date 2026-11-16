@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L1：Be 動詞的現在式 | 國中英文家教講義庫</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper-bg: #faf6ee;
+      --grid-line: #ece4d3;
+      --card-bg: #fffdf9;
+      --ink: #3d352e;
+      --muted: #786d63;
+      --matcha: #4a7c59;
+      --matcha-dark: #2f5233;
+      --matcha-soft: #e3efe6;
+      --sticky-yellow: #fdf3c7;
+      --tape-pink: rgba(235, 185, 178, 0.7);
+      --shadow-hard: #d6ccb8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--paper-bg);
+      background-image:
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 24px 24px;
+      color: var(--ink);
+      line-height: 1.8;
+      margin: 0;
+    }
+    .serif { font-family: "Noto Serif TC", Georgia, serif; }
+    nav {
+      background: rgba(255, 253, 249, 0.92);
+      backdrop-filter: blur(6px);
+      border-bottom: 2px solid var(--ink);
+      padding: 0.85rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-inner { max-width: 760px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    nav a {
+      text-decoration: none;
+      color: var(--matcha-dark);
+      font-weight: 700;
+      font-size: 0.92rem;
+      background: var(--matcha-soft);
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      border: 1.5px solid var(--matcha-dark);
+    }
+    nav a:hover { background: var(--matcha); color: #fff; }
+    .container { max-width: 760px; margin: 2.25rem auto 4rem; padding: 0 1.25rem; }
+    .header-box {
+      background: var(--card-bg);
+      border: 2px solid var(--ink);
+      border-radius: 16px;
+      padding: 2rem 1.75rem;
+      margin-bottom: 1.75rem;
+      position: relative;
+      box-shadow: 5px 5px 0px var(--matcha);
+    }
+    .washi-tape {
+      position: absolute;
+      top: -12px;
+      left: 32px;
+      width: 110px;
+      height: 24px;
+      background: var(--tape-pink);
+      transform: rotate(-2deg);
+    }
+    .badge {
+      background: var(--matcha);
+      color: #ffffff;
+      padding: 0.22rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    h1 { margin: 0.85rem 0 0.5rem; font-size: 1.75rem; line-height: 1.4; }
+    .card {
+      background: var(--card-bg);
+      border: 2px solid var(--ink);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 4px 4px 0px var(--shadow-hard);
+    }
+    h2 { color: var(--matcha-dark); font-size: 1.3rem; margin-top: 0; border-bottom: 2px dashed #d6ccb8; padding-bottom: 0.5rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1.1rem 0; font-size: 0.95rem; }
+    th, td { border: 1.5px solid var(--ink); padding: 0.75rem; text-align: left; }
+    th { background: var(--matcha-soft); color: var(--matcha-dark); font-weight: 700; }
+    code { background: #f1ece1; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 700; color: var(--matcha-dark); }
+    .tip-box {
+      background: var(--sticky-yellow);
+      border: 2px solid var(--ink);
+      border-radius: 12px;
+      padding: 1.75rem 1.5rem 1.5rem;
+      margin-bottom: 1.75rem;
+      position: relative;
+      box-shadow: 4px 4px 0px #e0cfa0;
+    }
+    .tip-tape {
+      position: absolute;
+      top: -11px;
+      left: 50%;
+      transform: translateX(-50%) rotate(1.5deg);
+      width: 95px;
+      height: 22px;
+      background: rgba(74, 124, 89, 0.45);
+    }
+    .tip-box h3 { margin-top: 0; color: #7c4a03; font-size: 1.15rem; }
+    .quiz-item { border-bottom: 1.5px dashed #d6ccb8; padding: 1.1rem 0; }
+    .quiz-item:last-child { border-bottom: none; padding-bottom: 0; }
+    button {
+      background: var(--matcha);
+      color: white;
+      border: 1.5px solid var(--ink);
+      padding: 0.42rem 0.95rem;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.86rem;
+      font-weight: 700;
+      margin-top: 0.4rem;
+      box-shadow: 2px 2px 0px var(--ink);
+      transition: transform 0.1s;
+    }
+    button:hover { background: var(--matcha-dark); transform: translate(-1px, -1px); }
+    .answer {
+      display: none;
+      margin-top: 0.75rem;
+      padding: 0.85rem 1rem;
+      background: var(--matcha-soft);
+      border: 1.5px dashed var(--matcha-dark);
+      border-radius: 10px;
+      color: var(--matcha-dark);
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html">← 返回講義目錄</a>
+    <span style="font-size: 0.85rem; color: var(--muted); font-weight: 700;">ENGLISH NOTES ・ L1</span>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="header-box">
+    <div class="washi-tape"></div>
+    <span class="badge">L1・國一上學期</span>
+    <h1 class="serif">Be 動詞的現在式與否定、疑問句</h1>
+    <p style="color:var(--muted); margin:0; font-size:0.95rem;">🎯 學習目標：學會根據主詞人稱正確使用 am / is / are，並能流利進行否定與疑問句轉換。</p>
+  </div>
+
+  <div class="card">
+    <h2 class="serif">📌 一、Be 動詞與主詞搭配表</h2>
+    <p>Be 動詞在現在式中代表「是」或「狀態」，必須依據<strong>主詞</strong>決定型態：</p>
+    <table>
+      <tr>
+        <th>Be 動詞</th>
+        <th>搭配主詞</th>
+        <th>例句</th>
+      </tr>
+      <tr>
+        <td><strong>am</strong></td>
+        <td>I（我）</td>
+        <td>I <strong>am</strong> a junior high school student.</td>
+      </tr>
+      <tr>
+        <td><strong>is</strong></td>
+        <td>He / She / It / 單數名詞</td>
+        <td>Kevin <strong>is</strong> tall and friendly.</td>
+      </tr>
+      <tr>
+        <td><strong>are</strong></td>
+        <td>You / We / They / 複數名詞</td>
+        <td>They <strong>are</strong> in the classroom now.</td>
+      </tr>
+    </table>
+    <p><strong>💡 句型轉換口訣：</strong></p>
+    <ul>
+      <li><strong>否定句：</strong>直接在 Be 動詞後面加 <code>not</code>（例：She <strong>is not</strong> = She <strong>isn't</strong>）。</li>
+      <li><strong>疑問句：</strong>直接把 Be 動詞搬到<strong>句首</strong>，句尾改問號（例：<strong>Are</strong> you happy?）。</li>
+    </ul>
+  </div>
+
+  <div class="tip-box">
+    <div class="tip-tape"></div>
+    <h3 class="serif">⚠️ 家教便利貼：段考最常扣分的 2 個陷阱！</h3>
+    <ol style="margin-bottom:0;">
+      <li><strong>肯定簡答絕對不能縮寫：</strong>問句 <em>Are you a student?</em> 肯定回答必須寫 <code>Yes, I am.</code>，<strong>不可寫</strong> <s>Yes, I'm.</s>（但否定簡答可以寫 <code>No, I'm not.</code>）。</li>
+      <li><strong>沒有縮寫的組合：</strong><code>am not</code> 沒有標準縮寫（不可寫 amn't），只能寫成 <code>I'm not</code>。</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2 class="serif">✍️ 二、隨堂小測驗（點擊翻看解析）</h2>
+
+    <div class="quiz-item">
+      <p><strong>1. My sister and I ______ in the same school.</strong><br>
+      (A) am &nbsp; (B) is &nbsp; (C) are &nbsp; (D) be</p>
+      <button onclick="toggleAns('a1')">翻開解答紙條</button>
+      <div id="a1" class="answer"><strong>正解：(C) are</strong><br>解析：主詞為 My sister and I（我姊姊和我，兩個人＝複數主詞），因此必須搭配複數 Be 動詞 are。</div>
+    </div>
+
+    <div class="quiz-item">
+      <p><strong>2. A: Is Mr. Wang your English teacher? &nbsp; B: Yes, ______.</strong><br>
+      (A) he's &nbsp; (B) he is &nbsp; (C) it is &nbsp; (D) Mr. Wang is</p>
+      <button onclick="toggleAns('a2')">翻開解答紙條</button>
+      <div id="a2" class="answer"><strong>正解：(B) he is</strong><br>解析：疑問句簡答時，人名必須改為代名詞 he，且「肯定簡答不可縮寫」，故選 (B)。</div>
+    </div>
+
+    <div class="quiz-item">
+      <p><strong>3. ______ your books on the desk?</strong><br>
+      (A) Am &nbsp; (B) Is &nbsp; (C) Are &nbsp; (D) Do</p>
+      <button onclick="toggleAns('a3')">翻開解答紙條</button>
+      <div id="a3" class="answer"><strong>正解：(C) Are</strong><br>解析：主詞為 your books（複數名詞），句中無其他一般動詞，故句首用 Are。</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleAns(id) {
+    const el = document.getElementById(id);
+    el.style.display = el.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
